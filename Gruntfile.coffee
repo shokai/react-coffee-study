@@ -13,11 +13,15 @@ module.exports = (grunt) ->
 
   grunt.initConfig
 
+    pkg: grunt.file.readJSON 'package.json'
+
     browserify:
       build:
         options:
           browserifyOptions:
-            transform: 'coffee-reactify'
+            transform: [
+              'coffee-reactify'
+            ]
             debug: process.env.NODE_ENV isnt 'production'
         files:
           'lib/main.js': [ 'src/*.{cjsx,coffee}' ]
