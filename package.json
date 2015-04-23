@@ -1,7 +1,7 @@
 {
   "name": "react-coffee",
   "version": "1.0.0",
-  "description": "",
+  "description": "WEB+DB Press vol.86 p123~ のnaoya氏のReact記事をcoffeeでやってみる",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -22,5 +22,16 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-notify": "^0.4.1",
     "react": "^0.13.2"
-  }
+  },
+  "devDependencies": {
+    "coffee-script": "^1.9.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shokai/react-coffee-study.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shokai/react-coffee-study/issues"
+  },
+  "homepage": "https://github.com/shokai/react-coffee-study"
 }
