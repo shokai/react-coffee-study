@@ -11,8 +11,13 @@ App = React.createClass
   render: ->
     <div>
       <input type="text" onChange={@updateMessage} />
-      <p>{@state.message}</p>
+      <Message message={@state.message} />
     </div>
+
+
+Message = React.createClass
+  render: ->
+    <p>{@props.message}</p>
 
 React.render <App />
 , document.getElementById 'app-container'
