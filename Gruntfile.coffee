@@ -17,12 +17,15 @@ module.exports = (grunt) ->
     cjsx:
       compile:
         options:
-          sourceMap: true
+          sourceMap: false
         files:
           'tmp/js/main.js': [ 'src/*.cjsx' ]
 
     browserify:
-      dist:
+      build:
+        options:
+          browserifyOptions:
+            debug: true
         files:
           'lib/main.js': [ 'tmp/js/main.js' ]
 
@@ -33,6 +36,7 @@ module.exports = (grunt) ->
         files: [
           '**/*.{coffee,cjsx}'
           '!lib/**'
+          '!tmp/**'
           '!node_modules/**'
         ]
         tasks: [ 'build' ]
