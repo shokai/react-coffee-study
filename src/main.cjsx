@@ -4,16 +4,22 @@ App = React.createClass
   getInitialState: ->
     message: ''
 
-  updateMessage: (e) ->
+  updateMessage: (message) ->
     @setState
-      message: e.target.value
+      message: message
 
   render: ->
     <div>
-      <input type="text" onChange={@updateMessage} />
+      <MessageInput onChange={@updateMessage} />
       <Message message={@state.message} />
     </div>
 
+MessageInput = React.createClass
+  onChange: (e) ->
+    @props.onChange e.target.value
+
+  render: ->
+    <input type="text" onChange={@onChange} />
 
 Message = React.createClass
   render: ->
