@@ -1,10 +1,18 @@
 React = require 'react'
 
-Hello = React.createClass
+App = React.createClass
+  getInitialState: ->
+    message: ''
+
+  updateMessage: (e) ->
+    @setState
+      message: e.target.value
+
   render: ->
     <div>
-      <h1>Hello, React</h1>
+      <input type="text" onChange={@updateMessage} />
+      <p>{@state.message}</p>
     </div>
 
-React.render <Hello />
+React.render <App />
 , document.getElementById 'app-container'
