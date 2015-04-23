@@ -23,9 +23,6 @@
     "grunt-notify": "^0.4.1",
     "react": "^0.13.2"
   },
-  "devDependencies": {
-    "coffee-script": "^1.9.2"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/shokai/react-coffee-study.git"
