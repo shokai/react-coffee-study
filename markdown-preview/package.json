@@ -1,0 +1,36 @@
+{
+  "name": "react-coffee",
+  "version": "1.0.0",
+  "description": "WEB+DB Press vol.86 p123~ のnaoya氏のReact記事をcoffeeでやってみる",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "grunt build"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Sho Hashimoto <hashimoto@shokai.org>",
+  "license": "MIT",
+  "dependencies": {
+    "coffee-errors": "^0.8.6",
+    "coffee-reactify": "^3.0.0",
+    "coffee-script": "^1.9.2",
+    "grunt": "^0.4.5",
+    "grunt-browserify": "^3.7.0",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-uglify": "^0.9.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-notify": "^0.4.1",
+    "markdown": "^0.5.0",
+    "react": "^0.13.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shokai/react-coffee-study.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shokai/react-coffee-study/issues"
+  },
+  "homepage": "https://github.com/shokai/react-coffee-study"
+}
