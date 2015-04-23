@@ -6,28 +6,21 @@ module.exports = (grunt) ->
 
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-notify'
-  grunt.loadNpmTasks 'grunt-coffee-react'
   grunt.loadNpmTasks 'grunt-browserify'
 
-  grunt.registerTask 'build',   [ 'cjsx', 'browserify' ]
+  grunt.registerTask 'build',   [ 'browserify' ]
   grunt.registerTask 'default', [ 'build', 'watch' ]
 
   grunt.initConfig
-
-    cjsx:
-      compile:
-        options:
-          sourceMap: false
-        files:
-          'tmp/js/main.js': [ 'src/*.cjsx' ]
 
     browserify:
       build:
         options:
           browserifyOptions:
-            debug: true
+            transform: 'coffee-reactify'
+            debug: process.env.NODE_ENV isnt 'production'
         files:
-          'lib/main.js': [ 'tmp/js/main.js' ]
+          'lib/main.js': [ 'src/*.{cjsx,coffee}' ]
 
     watch:
       options:
@@ -35,8 +28,8 @@ module.exports = (grunt) ->
       dist:
         files: [
           '**/*.{coffee,cjsx}'
+          '!*#*'
           '!lib/**'
-          '!tmp/**'
           '!node_modules/**'
         ]
         tasks: [ 'build' ]
