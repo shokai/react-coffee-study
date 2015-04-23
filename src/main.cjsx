@@ -40,7 +40,10 @@ MessageInput = React.createClass
 
 Message = React.createClass
   render: ->
-    msgs = @props.savedMessages.map (msg) -> <li>{msg}</li>
+    i = 0
+    msgs = @props.savedMessages.map (msg) ->
+      <li key={i++}>{msg}</li>
+
     <div>
       <p>{@props.message}</p>
       <ul>{msgs}</ul>
