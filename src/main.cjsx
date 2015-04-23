@@ -1,9 +1,10 @@
 React = require 'react'
 
-Input = React.createClass
+Hello = React.createClass
   render: ->
-    <div className="test">
+    <div>
+      <h1>Hello, React</h1>
     </div>
 
-Hoge = React.createClass
-  render: ->
+React.render <Hello />
+, document.getElementById 'app-container'
